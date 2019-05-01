@@ -1,0 +1,81 @@
+.wrapper{
+    display:block;
+    height:100px;
+    width:200px;
+    background-color:pink;
+}
+h1 {
+    text-align: center;
+}
+form {
+    display:flex;
+    flex-direction: column;
+    border: 1px solid #c6c7cc;
+    border-radius: 5px;
+    /* overflow: hidden; */
+    height: 20rem;
+    width: 20rem;
+    background-color:red;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    }
+
+/* label {
+    display:block;
+} */
+
+input {
+    margin-top: .5rem;
+    width:80%;
+    border: none;
+    align-self: center;
+    border-radius: 5px;
+    padding: .5rem;
+}
+/* .problem-info {
+    display:flex;
+    position: static;
+    flex-direction: column;
+    padding: 0px 20px 0 20px;
+    border:none;
+    outline:none;
+}
+.problem-info label {
+    color: #395870;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color:red;
+  } */
+  /* .problem-info input {
+      background: #fff;
+      border: 1px solid #c6c7cc;
+     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .1);
+     color: #636466;
+     padding: 6px;
+     margin-top: 6px;
+    width: 100%;
+} */
+  
+/* .account-action .btn {
+    background: linear-gradient(#49708f, #293f50);
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    float: left;
+                                                                                            .form-container{
+                                                                                                background-color:red;
+                                                                                            }
+    padding: 8px 16px;
+  }
+  .account-action label {
+    color: #7c7c80;
+    font-size: 12px;
+    float: left;
+    margin: 10px 0 0 20px;
+  } */
