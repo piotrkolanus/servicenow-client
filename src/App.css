@@ -1,7 +1,7 @@
 .wrapper{
     display:flex;
     margin-top: 4rem;
-    min-width:60rem;
+    max-width:80rem;
 }
 /* h1 {
     text-align: center;
@@ -26,15 +26,16 @@
     align-self: center;
     border-radius: 5px;
     padding: .5rem;
+    outline: none;
 }
 
 .form  textarea {
     height: 6rem;
     width:80%;
     align-self: center;
-    border-radius: 5px;
     padding: .5rem;
     border: 1px solid lightgray;
+    border-radius: 5px;
     resize: none;
     outline: none;
 }
@@ -42,4 +43,12 @@
 .form .form__submit {
     width: 25%;
     margin-top: .5rem;
+}
+
+ul {
+    flex:1;
+    /* background-color:red; */
+    margin:0 0 .5rem .5rem;
+    padding:0;
+    list-style-type:none;
 }

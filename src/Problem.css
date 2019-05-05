@@ -1,0 +1,27 @@
+.problem__wrapper{
+    display: flex;
+    border: 1px solid #c6c7cc;
+    border-radius: 5px;
+    margin-bottom: .5rem;
+}
+
+.problem__wrapper button{
+    display:block;
+    margin: 0 .5rem;
+    align-self: center;
+    border-radius: 5px;
+    padding: .5rem;
+    outline: none;
+
+}
+.problem__wrapper button:active { border-style: outset;}
+
+.problem__wrapper button:hover{
+    cursor: pointer;
+}
+li {
+    padding: .25rem;
+    height: 6rem;
+    border-radius: 5px;
+     word-break: break-all;
+}
