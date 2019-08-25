@@ -27,22 +27,25 @@ class App extends Component {
       work_notes: {
         value: ''
       }
-    }
+    },
+    currentEditingSysId: ''
   };
 
   handleSubmit = e => {
     e.preventDefault();
     const form_dataCpy = { ...this.state.form_data };
 
+    console.log(this.state.form_data);
+
     const readyFormData = this.createJSON(form_dataCpy);
 
     console.log(readyFormData);
-    fetch('https://dev65109.service-now.com/api/now/table/problem', {
+    fetch('https://dev78784.service-now.com/api/now/table/problem', {
       method: 'post',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: 'Basic ' + btoa('admin' + ':' + 'MountainFuji123')
+        Authorization: 'Basic ' + btoa('admin' + ':' + 'MountainFuji123#')
       },
       body: readyFormData
     })
@@ -62,6 +65,8 @@ class App extends Component {
   };
 
   createJSON = obj => {
+    console.log('initial obj structure: ' + JSON.stringify(obj));
+    console.log('using object keys' + Object.keys(obj));
     const flattened = Object.keys(obj).reduce(
       (acc, val) => ({ ...acc, [val]: obj[val].value }),
       {}
@@ -75,7 +80,6 @@ class App extends Component {
   handleChange = event => {
     const name = event.target.name;
     const value = event.target.value;
-    console.log(name);
     this.setState({
       form_data: {
         ...this.state.form_data,
@@ -110,14 +114,15 @@ class App extends Component {
     console.log(this.state.problemsArr);
     const problems = (
       <ul>
-        {this.state.problemsArr.map((problem, index) => {
+        {this.state.problemsArr.map(problem => {
           return (
             <Problem
+              id={problem.sys_id}
               number={problem.problem_number}
               subcategory={problem.subcategory}
               shortDescription={problem.short_description}
               notes={problem.work_notes}
-              key={index}
+              key={problem.sys_id}
               editForm={() => this.editFormHandler(problem.problem_id)}
             />
           );
